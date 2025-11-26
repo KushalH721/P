@@ -1,0 +1,81 @@
+:root{
+  --bg:#f5f8fb;
+  --card:#fff;
+  --muted:#6b7280;
+  --accent:#6b21a8;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:#0f172a;
+  display:flex;
+  min-height:100vh;
+}
+.sidebar{
+  width:220px;
+  background:#ffffff;
+  border-right:1px solid #e6eef6;
+  padding:20px;
+}
+.brand{font-weight:700;color:#0f4c3f;margin-bottom:10px}
+.sidebar nav a{
+  display:block;padding:10px 12px;border-radius:8px;color:#0f172a;text-decoration:none;margin:6px 0;font-size:14px;
+}
+.sidebar nav a.active{background:#083c38;color:#fff}
+.main{
+  flex:1;padding:20px 28px;overflow:auto;
+}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.greeting h1{margin:0;font-size:28px}
+.mood{color:var(--muted);margin-top:6px}
+.energy-circle{
+  width:72px;height:72px;border-radius:50%;background:linear-gradient(180deg,#0ea5a0,#6366f1);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;
+  box-shadow:0 6px 18px rgba(99,102,241,0.15);
+}
+.kpis{display:flex;gap:14px;margin-bottom:18px}
+.card{flex:1;padding:18px;border-radius:10px;color:#fff;position:relative}
+.card .card-title{opacity:0.9;font-size:13px}
+.card .card-value{font-size:22px;font-weight:700;margin-top:6px}
+.purple{background:linear-gradient(90deg,#7c3aed,#a78bfa)}
+.blue{background:linear-gradient(90deg,#4f46e5,#60a5fa)}
+.pink{background:linear-gradient(90deg,#fb7185,#fb7185)}
+.green{background:linear-gradient(90deg,#10b981,#34d399)}
+
+.content-grid{display:flex;gap:18px}
+.left{flex:2;display:flex;flex-direction:column;gap:18px}
+.right{width:320px}
+.panel{background:var(--card);padding:16px;border-radius:10px;border:1px solid #e6eef6}
+.performance .bars{display:flex;gap:8px;align-items:end;height:160px;padding:14px 6px}
+.performance .bar{flex:1;text-align:center}
+.performance .bar div{background:linear-gradient(180deg,#60a5fa,#7dd3fc);border-radius:6px;width:100%}
+.perf-meta{display:flex;justify-content:space-between;color:var(--muted);margin-top:12px}
+.protip{margin-top:10px;color:#374151;font-size:13px}
+
+.quote blockquote{margin:0;font-size:16px;font-style:italic;color:#0f172a}
+.learning{margin-top:12px;color:var(--muted)}
+
+.reminders .empty{color:var(--muted);padding:18px;text-align:center}
+.achievements .achievement{margin-bottom:12px}
+.ach-title{font-weight:700}
+.ach-bar{background:#f1f5f9;border-radius:8px;height:14px;overflow:hidden;margin:8px 0}
+.ach-bar div{height:100%;background:linear-gradient(90deg,#10b981,#34d399)}
+
+.tasks-panel{margin-top:18px}
+.task-controls{display:flex;justify-content:space-between;align-items:center}
+.progressbar{flex:1;height:10px;background:#f1f5f9;border-radius:999px;margin-right:12px;overflow:hidden}
+.progressbar div{height:100%;background:linear-gradient(90deg,#0ea5a0,#6366f1)}
+#increaseXP{background:#0ea5a0;color:#fff;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+
+.task-columns{display:flex;gap:18px;margin-top:14px}
+.col{flex:1}
+.task{background:#f8fafc;padding:10px;border-radius:8px;margin-bottom:8px;border:1px solid #e6eef6}
+
+.footer{margin-top:18px;color:var(--muted);text-align:center;font-size:13px}
+@media(max-width:900px){
+  .sidebar{display:none} 
+  .content-grid{flex-direction:column}
+  .right{width:auto}
+  .kpis{flex-direction:column}
+}
